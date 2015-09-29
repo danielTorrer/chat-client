@@ -10,7 +10,6 @@ gulpif    = require('gulp-if'),
 minifyCss = require('gulp-minify-css'),
 useref    = require('gulp-useref'),
 uglify    = require('gulp-uglify'),
-uncss     = require('gulp-uncss'),
 historyApiFallback = require('connect-history-api-fallback');
 
 // Servidor web de desarrollo
@@ -98,5 +97,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['server', 'watch']);
-gulp.task('build', ['compress', 'uncss']);
-gulp.task('build', ['uncss']);
+gulp.task('build', ['compress']);
