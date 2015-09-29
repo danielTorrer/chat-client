@@ -24,7 +24,7 @@
 				var id_user = $('.id_user').val();
 				console.info('connecting user ' + id_user);
 
-				socket = io.connect('http://localhost:8001');
+				socket = io.connect('http://sdkinnova.herokuapp.com/');
 				socket.on('connect', function(){
 					socket.emit('connect_user', {id: $('.id_user').val()} )
 				});
